@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoFix - Advanced E-Waste Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function calculateEwaste() {
+            const smartphone = parseInt(document.getElementById('smartphone').value) || 0;
+            const laptop = parseInt(document.getElementById('laptop').value) || 0;
+            const desktop = parseInt(document.getElementById('desktop').value) || 0;
+
+            // Weights in kg
+            const totalWeight = (smartphone * 0.2) + (laptop * 2.5) + (desktop * 8);
+
+            // Prices in USD
+            const totalPrice = (smartphone * 10) + (laptop * 50) + (desktop * 100);
+
+            // Toxic materials in kg
+            const toxicMaterials = (smartphone * 0.02) + (laptop * 0.3) + (desktop * 0.8);
+
+            // Energy saved in kWh (approximation)
+            const energySaved = (smartphone * 15) + (laptop * 200) + (desktop * 500);
+
+            // Display results
+            document.getElementById('result').innerHTML = `
+                <p class="text-lg text-green-600 font-semibold">Estimated E-Waste: ${totalWeight.toFixed(2)} kg</p>
+                <p class="text-lg text-blue-600 font-semibold">Estimated Price: $${totalPrice.toFixed(2)}</p>
+                <p class="text-lg text-red-600 font-semibold">Total Toxic Materials: ${toxicMaterials.toFixed(2)} kg</p>
+                <p class="text-lg text-purple-600 font-semibold">Energy Saved: ${energySaved.toFixed(2)} kWh</p>
+            `;
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-b from-green-100 via-white to-green-50">
+
+    <header class="bg-green-600 text-white text-center py-6 shadow-lg">
+        <h1 class="text-4xl font-extrabold">EcoFix - Advanced E-Waste Calculator</h1>
+        <p class="mt-2 text-lg">Empowering Recycling for a Sustainable Future</p>
+    </header>
+
+    <main class="container mx-auto my-8 p-6">
+        <div class="bg-white shadow-xl rounded-lg p-8 border-t-4 border-green-600">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Calculate Your E-Waste Impact</h2>
+            <p class="text-gray-600 mb-6">Enter the number of items to see the environmental and financial benefits of recycling:</p>
+
+            <div class="grid gap-6 md:grid-cols-3">
+                <!-- Smartphone Input -->
+                <div class="flex flex-col">
+                    <label for="smartphone" class="font-medium text-gray-700">Smartphones</label>
+                    <input 
+                        type="number" 
+                        id="smartphone" 
+                        class="border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400" 
+                        placeholder="Enter quantity" 
+                        min="0">
+                </div>
+
+                <!-- Laptop Input -->
+                <div class="flex flex-col">
+                    <label for="laptop" class="font-medium text-gray-700">Laptops</label>
+                    <input 
+                        type="number" 
+                        id="laptop" 
+                        class="border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400" 
+                        placeholder="Enter quantity" 
+                        min="0">
+                </div>
+
+                <!-- Desktop Input -->
+                <div class="flex flex-col">
+                    <label for="desktop" class="font-medium text-gray-700">Desktops</label>
+                    <input 
+                        type="number" 
+                        id="desktop" 
+                        class="border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400" 
+                        placeholder="Enter quantity" 
+                        min="0">
+                </div>
+            </div>
+
+            <button 
+                onclick="calculateEwaste()" 
+                class="mt-6 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 focus:ring-2 focus:ring-green-400 shadow-md">
+                Calculate
+            </button>
+
+            <div id="result" class="mt-6 text-center space-y-4"></div>
+
+            <div class="mt-10 text-center">
+                <a 
+                    href="file:///C:/Users/hp/Documents/Sound%20recordings/Custom%20Office%20Templates/form.html" 
+                    class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 shadow-lg inline-block text-xl font-semibold">
+                    Recycle Now
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <p class="text-sm">&copy; 2024 EcoFix. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

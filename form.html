@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your E-Waste</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-gray-100 via-white to-green-50">
+
+    <header class="bg-green-600 text-white text-center py-6 shadow-lg">
+        <h1 class="text-4xl font-extrabold">EcoFix - Sell Your E-Waste</h1>
+        <p class="mt-2 text-lg">Submit your details and contribute to a cleaner planet!</p>
+    </header>
+
+    <main class="container mx-auto my-8 p-6">
+        <div class="bg-white shadow-xl rounded-lg p-8 border-t-4 border-green-600">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Customer Information Form</h2>
+            <form action="/submit-e-waste" method="POST" class="space-y-6">
+                <!-- Name -->
+                <div>
+                    <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-400" 
+                        placeholder="Enter your full name" 
+                        required>
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-400" 
+                        placeholder="Enter your email address" 
+                        required>
+                </div>
+
+                <!-- Phone -->
+                <div>
+                    <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-400" 
+                        placeholder="Enter your phone number" 
+                        required>
+                </div>
+
+                <!-- Address -->
+                <div>
+                    <label for="address" class="block text-gray-700 font-medium mb-2">Address</label>
+                    <textarea 
+                        id="address" 
+                        name="address" 
+                        class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-400" 
+                        placeholder="Enter your address" 
+                        rows="4" 
+                        required></textarea>
+                </div>
+
+                <!-- Item Description -->
+                <div>
+                    <label for="items" class="block text-gray-700 font-medium mb-2">E-Waste Items to Sell</label>
+                    <textarea 
+                        id="items" 
+                        name="items" 
+                        class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-400" 
+                        placeholder="Describe the e-waste items (e.g., 2 smartphones, 1 laptop)" 
+                        rows="4" 
+                        required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+<a
+                    <button 
+                        type="submit" 
+                        href="file:///C:/Users/hp/Documents/Sound%20recordings/Custom%20Office%20Templates/page1.html"
+                        class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 focus:ring-2 focus:ring-green-400 shadow-md text-lg font-semibold">
+                        Submit Details
+                    </button>
+</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <p class="text-sm">&copy; 2024 EcoFix. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
